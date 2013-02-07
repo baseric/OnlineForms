@@ -1,0 +1,169 @@
+{
+	"key": "19378465829045",
+	"to": "",
+	"cc": "",
+	"bcc": "",
+	"from": "",
+	"subject": "",
+	"redirect": "",
+	"dcp": "",
+	"format": "email",
+	"fieldsets": [
+		{
+			"legend": "Legend",
+			"elements": [
+				{
+					"label": "Text",
+					"type": "text",
+					"name": "nametext",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true,
+						"patterns": [
+							"{2,}",
+							"[A-Za-z0-9\\s]{4,}",
+							"[A-Za-z\\s]",
+							"[A-Za-z-.,()'&quot;\\s]",
+							"{5,10}"
+						]
+					}
+				},
+				{
+					"label": "Password",
+					"type": "password",
+					"name": "namepassword",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true,
+						"patterns": [
+							"{2,}",
+							"[A-Za-z0-9\\s]{4,}",
+							"[A-Za-z\\s]",
+							"[A-Za-z-.,()'&quot;\\s]",
+							"{5,10}"
+						]
+					}
+				},
+				{
+					"label": "Checkbox",
+					"type": "checkbox",
+					"name": "namecheckbox",
+					"value": "valuecheckbox",
+					"selected": true
+				},
+				{
+					"label": "URL",
+					"type": "url",
+					"name": "url",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true
+					}
+				},				
+				{
+					"label": "Email",
+					"type": "email",
+					"name": "nameemail",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true
+					}
+				},
+				{
+					"label": "Telephone",
+					"type": "tel",
+					"name": "nametelephone",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true
+					}
+				},
+				{
+					"label": "Date",
+					"type": "date",
+					"name": "namedate",
+					"size": 12,
+					"maxlength": 12,
+					"validations": {
+						"required": true
+					}
+				},				
+				{
+					"label": "Time",
+					"type": "time",
+					"name": "nametime",
+					"validations": {
+						"required": true
+					}
+				},
+				{
+					"label": "Number",
+					"type": "number",
+					"name": "namenumber",
+					"min": 1,
+					"max": 10,
+					"validations": {
+						"required": true
+					}
+				},
+				{
+					"label": "Select",
+					"type": "select",
+					"name": "nameselect",
+					"size": 1,
+					"validations": {
+						"required": true
+					},
+					"options" : [
+						{
+							"label": "Option 1",
+							"value": "option1",
+							"selected": true
+						},
+						{
+							"label": "Option 2",
+							"value": "option2",
+							"selected": false
+						}
+					]
+				},
+				{
+					"label": "Textarea",
+					"type": "textarea",
+					"name": "textarea",
+					"rows": 5,
+					"cols": 45,
+					"validations": {
+						"required": true,
+						"patterns": []
+					}
+				},
+				{
+					"type": "hidden",
+					"name": "hiddenname",
+					"value": "hiddenvalue"
+				}
+			]
+		},
+		{
+			"legend": null,
+			"elements": [
+				{
+					"type": "submit",
+					"name": "submit",
+					"value": "Submit"
+				},
+				{
+					"type": "reset",
+					"name": "reset",
+					"value": "Reset"
+				},
+			]
+		}
+	]
+}
