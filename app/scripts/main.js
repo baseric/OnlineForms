@@ -1,6 +1,7 @@
 require.config({
 	paths: {
 		jquery: 'libs/jquery-1.9.1.min',
+		jqueryui: 'libs/jquery-ui-1.10.0.min',
 		underscore: 'libs/underscore-1.4.4.min',
 		backbone: 'libs/backbone-0.9.10.min',
 		text: 'libs/text',
@@ -17,8 +18,8 @@ require.config({
 	}
 });
 
-require(['jquery', 'views/app', 'backbone'],
-	function( $, AppView, Backbone ) {
+require(['jquery', 'jqueryui', 'views/app', 'backbone'],
+	function( $, jqueryui, AppView, Backbone ) {
 
 		// Initialize the application view
 		new AppView({ el: '#app' });
