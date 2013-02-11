@@ -1,17 +1,22 @@
 define(['underscore',
-		'backbone'
-], function ( _, Backbone ) {
+		'backbone',
+		'collections/formTools',
+		'collections/elements',
+		'views/element'
+], function ( _, Backbone, FormToolsCollection, ElementsCollection, ElementView ) {
 	"use strict";
 
 	var FormEditorView = Backbone.View.extend({
 
 		initialize: function () {
-			console.log('FormEditorView initialize');
-			this.render();
+
+			this.elementView = new ElementView({ 'label': 'test' });
+
 		},
 
 		render: function () {
-			console.log('FormEditorView render');
+
+			return this;
 		}
 
 	});

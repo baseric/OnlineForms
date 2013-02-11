@@ -1,31 +1,33 @@
 define(['underscore',
 		'backbone',
-		'collections/formElements',
-		'views/formElement'
-], function ( _, Backbone, FormElementsCollection, FormElementView ) {
+		'collections/formTools',
+		'views/formTool'
+], function ( _, Backbone, FormToolsCollection, FormToolView ) {
 	"use strict";
 
-	var FormElementsView = Backbone.View.extend({
+	var FormToolsView = Backbone.View.extend({
 
 		initialize: function() {
+			//console.log('FormToolsView: initialize()');
+			
 			// triggers the render function when a reset occurs
-			FormElementsCollection.on( 'reset', this.render, this );
+			FormToolsCollection.on( 'reset', this.render, this );
 			// fetch the collection
-			FormElementsCollection.fetch();
+			FormToolsCollection.fetch();
 		},
 
 		render: function() {
 			// create a new form element view for each form element model in the collection
-			_.each(FormElementsCollection.models, function (formElement) {
+			_.each(FormToolsCollection.models, function (formTool) {
 				// create a new form element view
-				var formElementView = new FormElementView({model: formElement});
+				var formToolView = new FormToolView({model: formTool});
 				// attach the form element view to it's parent view ($el)
-				this.$el.append(formElementView.render().el);
+				this.$el.append(formToolView.render().el);
 			}, this);
 
 			// attach the draggable on the parent element
 			$('li', this.$el).draggable({
-				connectToSortable: "#formEditorView",
+				connectToSortable: "#formEditor",
 				helper: "clone",
 				revert: "invalid"
 			});
@@ -35,5 +37,5 @@ define(['underscore',
 
 	});
 
-	return FormElementsView;
+	return FormToolsView;
 });

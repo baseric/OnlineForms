@@ -1,14 +1,14 @@
 define(['underscore',
 		'backbone',
-		'text!templates/formElement.html',
-], function ( _, Backbone, formElementTemplate ) {
+		'text!templates/formTool.html'
+], function ( _, Backbone, formToolTemplate ) {
 	"use strict";
 
-	var FormElementView = Backbone.View.extend({
+	var FormToolView = Backbone.View.extend({
 
 		tagName: 'li',
 
-		template: _.template( formElementTemplate ),
+		template: _.template( formToolTemplate ),
 
 		initialize: function () {
 			this.model.on( 'change', this.render, this );
@@ -22,5 +22,5 @@ define(['underscore',
 
 	});
 
-	return FormElementView;
+	return FormToolView;
 });

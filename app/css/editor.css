@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-#toolbarView {
+#toolbar {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	/*width: 250px; */
 	position: absolute;
@@ -8,7 +8,7 @@
 	left: 400px;
 }
 
-#toolbarView .handle {
+#toolbar .handle {
 	display: none;
 	position: absolute;
 	top: -10px;
@@ -20,7 +20,7 @@
 	background-color: red;
 }
 
-#toolbarView #formElements {
+#toolbar #formTools {
 	background: #000;
 	color: #FFF;
 	border-radius: 2px;
@@ -32,18 +32,18 @@
 	list-style: none;
 }
 
-#toolbarView #formElements li {
+#toolbar #formTools li {
 	margin: 0;
 	padding: 5px;
 	border: solid 1px #DDD;
 	text-align: center;
 	margin-top: 1px;
 }
-#toolbarView #formElements li:first-child {
+#toolbar #formTools li:first-child {
 	margin-top: 0;
 }
 
-#formEditorView {
+#formEditor {
 	background: #fff;
 	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
 				0 25px 50px 0 rgba(0, 0, 0, 0.15);
@@ -52,12 +52,12 @@
 }
 
 
-#formEditorView .ui-sortable-placeholder {
+#formEditor .ui-sortable-placeholder {
 	background-color: #FFC !important;
 	outline: 1px dashed #ddd !important;
 }
 
-#formEditorView .handle {
+#formEditor .handle {
 	position: absolute;
 	display: none;
 	z-index: 2;
@@ -68,6 +68,6 @@
 	height: 45px;
 }
 
-#formEditorView .module .handle {
+#formEditor .module .handle {
 	margin: -11px 0 0 -11px;
 }

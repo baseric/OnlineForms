@@ -1,8 +1,8 @@
 define(['underscore',
 		'backbone',
 		'text!templates/handle.html',
-		'views/formElements'
-], function ( _, Backbone, HandleTemplate, FormElementsView ) {
+		'views/formTools'
+], function ( _, Backbone, HandleTemplate, FormToolsView ) {
 	"use strict";
 
 	var ToolbarView = Backbone.View.extend({
@@ -15,8 +15,10 @@ define(['underscore',
 		tplHandle: _.template( HandleTemplate ),
 
 		initialize: function() {
-			// create the formElements view
-			this.formElementsView = new FormElementsView({ el: '#formElements' });
+			//console.log('ToolbarView: initialize()');
+
+			// create the formToolsView view
+			this.formToolsView = new FormToolsView({ el: '#formTools' });
 
 			// append handle to toolbar
 			this.$el.append(this.tplHandle());
